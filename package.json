@@ -1,7 +1,7 @@
 {
-  "name": "𝚂𝚄𝙻𝙰-md",
+  "name": "JANI-md",
   "version": "1.0.0",
-  "description": "𝚂𝚄𝙻𝙰-MD WhatsApp Bot with Multi-Number Support",
+  "description": "JANI-MD WhatsApp Bot with Multi-Number Support",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -34,8 +34,8 @@
     "bot",
     "multi-device",
     "baileys",
-    "sula-md"
+    "JANI-md"
   ],
-  "author": "𝚂𝚄𝙻𝙰𝙺𝚂𝙷𝙰 𝙼𝙰𝙳𝙰𝚁𝙰",
-  "license": "©𝚂𝚄𝙻𝙰 𝙼𝙳 𝙵𝚁𝙴𝙴 𝙼𝙸𝙽𝙸 𝙱𝙰𝚂𝙴" //𝙳𝙾𝙽𝚃 𝚁𝙴𝙼𝙾𝚅𝙴 𝙲𝚁𝙴𝙳𝙸𝚃𝙴𝚂 
+  "author": "JANITH SATHSARA",
+  "license": "©JANI 𝙼𝙳 𝙵𝚁𝙴𝙴 𝙼𝙸𝙽𝙸 𝙱𝙰𝚂𝙴" //𝙳𝙾𝙽𝚃 𝚁𝙴𝙼𝙾𝚅𝙴 𝙲𝚁𝙴𝙳𝙸𝚃𝙴𝚂 
 }
