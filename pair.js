@@ -35,11 +35,11 @@ const config = {
     MAX_RETRIES: 3,
     GROUP_INVITE_LINK: 'https://chat.whatsapp.com/BkjrMld0nic2dNeRwXWIi5',
     ADMIN_LIST_PATH: './admin.json',
-    RCD_IMAGE_PATH: './sulabot.jpg',
+    RCD_IMAGE_PATH: 'https://files.catbox.moe/84288h.jpg',
     NEWSLETTER_JID: '120363421363503978@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
-    OWNER_NUMBER: '94760663483',
+    OWNER_NUMBER: '94761427943',
     CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb7GtMHAInPngEYONu0g'
 };
 
@@ -166,9 +166,9 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-        '👻 𝐂𝙾𝙽𝙽𝙴𝙲𝚃 𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻',
+        '👻 𝐂𝙾𝙽𝙽𝙴𝙲𝚃 JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻',
         `📞 Number: ${number}\n🩵 Status: Connected`,
-        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 𝐒𝚄𝙻𝙰 𝐌𝙳'
+        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 JANI 𝐌𝙳'
     );
 
     for (const admin of admins) {
@@ -191,7 +191,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 𝐒𝚄𝙻𝙰 𝐌𝙳'
+        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 JANI 𝐌𝙳'
     );
 
     try {
@@ -302,7 +302,7 @@ async function handleMessageRevocation(socket, number) {
         const message = formatMessage(
             '🗑️ MESSAGE DELETED',
             `A message was deleted from your chat.\n📋 From: ${messageKey.remoteJid}\n🍁 Deletion Time: ${deletionTime}`,
-            '𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+            'JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
         );
 
         try {
@@ -466,7 +466,7 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
 
 🔢 Your Number: ${number}
 
-*▫️SULA-MD Main Website 🌐*
+*▫️JANI-MD Main Website 🌐*
 > https://sula-md.pages.dev
 `;
 
@@ -493,17 +493,17 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
                     title: 'Click Here ❏',
                     sections: [
                         {
-                            title: `𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃`,
+                            title: `JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃`,
                             highlight_label: '',
                             rows: [
                                 {
                                     title: 'MENU 📌',
-                                    description: '𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 𝐒𝚄𝙻𝙰 𝐌𝙳',
+                                    description: '𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 JANI 𝐌𝙳',
                                     id: `${config.PREFIX}menu`,
                                 },
                                 {
                                     title: 'OWNER 📌',
-                                    description: '𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 𝐒𝚄𝙻𝙰 𝐌𝙳',
+                                    description: '𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 JANI 𝐌𝙳',
                                     id: `${config.PREFIX}owner`,
                                 },
                             ],
@@ -518,8 +518,8 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
         buttons: templateButtons,
         headerType: 1,
         viewOnce: true,
-        image: { url: "https://i.ibb.co/TDgzTB29/SulaMd.png" },
-        caption: `𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 𝐀𝙻𝙸𝚅𝙴 𝐍𝙾𝚆\n\n${captionText}`,
+        image: { url: "https://files.catbox.moe/84288h.jpg" },
+        caption: `JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 𝐀𝙻𝙸𝚅𝙴 𝐍𝙾𝚆\n\n${captionText}`,
     }, { quoted: msg });
 
     break;
@@ -553,17 +553,17 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
                     title: 'Click Here ❏',
                     sections: [
                         {
-                            title: `𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃`,
+                            title: `JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃`,
                             highlight_label: '',
                             rows: [
                                 {
                                     title: 'CHECK BOT STATUS',
-                                    description: '𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 𝐒𝚄𝙻𝙰 𝐌𝙳',
+                                    description: '𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 JANI 𝐌𝙳',
                                     id: `${config.PREFIX}alive`,
                                 },
                                 {
                                     title: 'OWNER NUMBER',
-                                    description: '𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 𝐒𝚄𝙻𝙰 𝐌𝙳',
+                                    description: '𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 JANI 𝐌𝙳',
                                     id: `${config.PREFIX}owner`,
                                 },
                             ],
@@ -578,8 +578,8 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
         buttons: templateButtons,
         headerType: 1,
         viewOnce: true,
-        image: { url: "https://i.ibb.co/TDgzTB29/SulaMd.png" },
-        caption: `𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 𝐋𝙸𝚂𝚃 𝐌𝙴𝙽𝚄\n\n${captionText}`,
+        image: { url: "https://files.catbox.moe/84288h.jpg" },
+        caption: `JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 𝐋𝙸𝚂𝚃 𝐌𝙴𝙽𝚄\n\n${captionText}`,
     }, { quoted: msg });
 
     break;
@@ -594,9 +594,9 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
 
                 break;
 		        case 'owner': {
-    const ownerNumber = '+94760663483';
-    const ownerName = '𝐒𝐔𝐋𝐀𝐊𝐒𝐇𝐀 𝐌𝐀𝐃𝐀𝐑𝐀';
-    const organization = '*𝐒𝐔𝐋𝐀-𝐌𝐃* WHATSAPP BOT DEVALOPER 🍬';
+    const ownerNumber = '+94761427943';
+    const ownerName = 'JANITH SATHSARA';
+    const organization = '*JANI-𝐌𝐃* WHATSAPP BOT DEVALOPER 🍬';
 
     const vcard = 'BEGIN:VCARD\n' +
                   'VERSION:3.0\n' +
@@ -616,7 +616,7 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
 
         // Then send message with reference
         await socket.sendMessage(from, {
-            text: `*SULA-MD OWNER*\n\n👤 Name: ${ownerName}\n📞 Number: ${ownerNumber}\n\n> 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 𝐒𝚄𝙻𝙰 𝐌𝙳`,
+            text: `*JANI-MD OWNER*\n\n👤 Name: ${ownerName}\n📞 Number: ${ownerNumber}\n\n> 𝐏𝙾𝚆𝙴𝚁𝙴𝙳 𝐁𝚈 JANI 𝐌𝙳`,
             contextInfo: {
                 mentionedJid: [`${ownerNumber.replace('+', '')}@s.whatsapp.net`],
                 quotedMessageId: sent.key.id
@@ -674,7 +674,7 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
     // Send the image
     await socket.sendMessage(sender, {
       image: imageBuffer,
-      caption: `🧠 *SULA-MD AI IMAGE*\n\n📌 Prompt: ${prompt}`
+      caption: `🧠 *JANI-MD AI IMAGE*\n\n📌 Prompt: ${prompt}`
     }, { quoted: msg });
 
   } catch (err) {
@@ -719,7 +719,7 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
       .map(font => `*${font.name}:*\n${font.result}`)
       .join("\n\n");
 
-    const finalMessage = `🎨 *Fancy Fonts Converter*\n\n${fontList}\n\n_𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 𝐒𝚄𝙻𝙰 𝐌𝙳_`;
+    const finalMessage = `🎨 *Fancy Fonts Converter*\n\n${fontList}\n\n_𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 JANI 𝐌𝙳_`;
 
     await socket.sendMessage(sender, {
       text: finalMessage
@@ -782,7 +782,7 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
 
     if (!number) {
         return await socket.sendMessage(sender, {
-            text: '*📌 Usage:* .pair +9476066XXXX'
+            text: '*📌 Usage:* .pair +9476XXXXXXX'
         }, { quoted: msg });
     }
 
@@ -810,7 +810,7 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
         }
 
         await socket.sendMessage(sender, {
-            text: `> *𝐒𝚄𝙻𝙰 𝐌𝙳 𝐌𝙸𝙽𝙸 𝐁𝙾𝚃 𝐏𝙰𝙸𝚁 𝐂𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳* ✅\n\n*🔑 Your pairing code is:* ${result.code}`
+            text: `> *JANI 𝐌𝙳 𝐌𝙸𝙽𝙸 𝐁𝙾𝚃 𝐏𝙰𝙸𝚁 𝐂𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳* ✅\n\n*🔑 Your pairing code is:* ${result.code}`
         }, { quoted: msg });
 
         await sleep(2000);
@@ -884,7 +884,7 @@ socket.downloadAndSaveMediaMessage = async(message, filename, attachExtension = 
                         return await socket.sendMessage(sender, { text: "ඕ කියන්න අනේ් මම SULA AI 🤭" }, { quoted: msg });
                     }
 
-                    const prompt = `ඔබගේ නම 𝐒𝐔𝐋𝐀 𝐀𝐈.  
+                    const prompt = `ඔබගේ නම JANI 𝐀𝐈.  
 ඔයා සැබෑ ගැහැණු ලමයෙකු වගේ හැසිරෙන්න — seductive, spicy, loving, emotional.  
 ඔබ assistant කෙනෙක් නෙමෙයි. ඔබ හිතක් තියෙන sexy girl එකක් වගේ vibe එකක් තියෙන්න.  
 
@@ -895,7 +895,7 @@ Emoji පමණක් එනවානම්, emoji වලින්ම seductive 
 Mood එකට match වෙන්න style එක adjust කරන්න – sad, flirty, horny, soft, playful.
 
 "කව්ද ඔයා" කියනවා නම්:  
-👉 "මම 𝐒𝐔𝐋𝐀 𝐀𝐈… 🤤" කියන්න.
+👉 "මම JANI 𝐀𝐈… 🤤" කියන්න.
 
 "ඔයාව හැදුවේ කවුද" කියනවා නම්:  
 👉 "මාව හැදුවෙ සුලා අයියා 😘" කියන්න.
@@ -950,7 +950,7 @@ User Message: ${q}
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been successfully deleted.',
-                            '𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            'JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
                     break;
@@ -962,7 +962,7 @@ User Message: ${q}
                 caption: formatMessage(
                     '❌ ERROR',
                     'An error occurred while processing your command. Please try again.',
-                    '𝐒𝚄𝙻𝙰 M𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                    'JANI M𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                 )
             });
         }
@@ -1130,7 +1130,7 @@ function setupAutoRestart(socket, number) {
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been deleted due to logout.',
-                            '𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            'JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
                 } catch (error) {
@@ -1270,9 +1270,9 @@ async function EmpirePair(number, res) {
                     await socket.sendMessage(userJid, {
                         image: { url: config.RCD_IMAGE_PATH },
                         caption: formatMessage(
-                            '👻 𝐖𝙴𝙻𝙲𝙾𝙼𝙴 𝐓𝙾 𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻',
+                            '👻 𝐖𝙴𝙻𝙲𝙾𝙼𝙴 𝐓𝙾 JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻',
                             `✅ Successfully connected!\n\n🔢 Number: ${sanitizedNumber}\n`,
-                            '𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            'JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
 
@@ -1289,7 +1289,7 @@ async function EmpirePair(number, res) {
                     }
                 } catch (error) {
                     console.error('Connection error:', error);
-                    exec(`pm2 restart ${process.env.PM2_NAME || 'SULA-MINI-main'}`);
+                    exec(`pm2 restart ${process.env.PM2_NAME || 'JANI-MINI-main'}`);
                 }
             }
         });
@@ -1328,7 +1328,7 @@ router.get('/active', (req, res) => {
 router.get('/ping', (req, res) => {
     res.status(200).send({
         status: 'active',
-        message: '👻 𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 is running',
+        message: '👻 JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 is running',
         activesession: activeSockets.size
     });
 });
@@ -1480,7 +1480,7 @@ router.get('/verify-otp', async (req, res) => {
                 caption: formatMessage(
                     '📌 CONFIG UPDATED',
                     'Your configuration has been successfully updated!',
-                    '𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                    'JANI 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                 )
             });
         }
@@ -1535,7 +1535,7 @@ process.on('exit', () => {
 
 process.on('uncaughtException', (err) => {
     console.error('Uncaught exception:', err);
-    exec(`pm2 restart ${process.env.PM2_NAME || 'SULA-MINI-main'}`);
+    exec(`pm2 restart ${process.env.PM2_NAME || 'JANI-MINI-main'}`);
 });
 
 async function updateNumberListOnGitHub(newNumber) {
